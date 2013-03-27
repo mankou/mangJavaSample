@@ -1,3 +1,14 @@
+/**
+ * @author mang
+ * create:2013-3-27 17:04
+ * last modify:2013-3-27 17:05
+ * *功能说明：基于小根堆计算TopN问题
+ * *使用说明：右键-运行-java application即可
+ * *细节说明：这里随机产生一亿个整数，然后选出最大的100个
+ * *其它说明：代码直接摘自网上
+ * 			网址：一亿数据获取前100个最大值(基于最小堆和Quicksort) http://blog.csdn.net/beiyetengqing/article/details/8011792
+ * 
+ * */
 package mang.algorithm;
 
 import java.util.Random;
@@ -6,7 +17,7 @@ public class TopHundredHeap {
     
     public static void main(String[] args) {  
         // the size of the array  
-        int number = 100000000;  
+        int number = 10000000;  
         // the top k values  
         int k = 100;  
         // the range of the values in the array  
@@ -30,7 +41,7 @@ public class TopHundredHeap {
         //end time  
         t2 = System.currentTimeMillis();   
         System.out.println("The total execution time of " +  
-                "quicksort based method is " + (t2 - t1) +" millisecond!");  
+                "miniHeap based method is " + (t2 - t1) +" millisecond!");  
           
         // print out the top k largest values in the top array  
         System.out.println("The top "+ k + "largest values are:");  
